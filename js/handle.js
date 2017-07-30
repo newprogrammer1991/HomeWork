@@ -9,7 +9,7 @@ var swiperV = new Swiper('.swiper-container-v', {
     direction: 'vertical',
     longSwipes: false,
     followFinger: false,
-    height:document.documentElement.clientHeight
+   // height:document.documentElement.clientHeight
 
 });
 
@@ -24,8 +24,3 @@ var swiperV = new Swiper('.swiper-container-v', {
         direction: 'horizontal'
     });
 
-var btn=document.querySelector('.btn');
-btn.addEventListener('click',function () {
-    swiperH.slideTo(1);
-    console.log('f');
-})
