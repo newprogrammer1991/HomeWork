@@ -94,12 +94,14 @@ img {
     background-image: url("../img/bg3_1.png");
 }
 
-.section3-2{
+.section3-2 {
     background-image: url("../img/bg3_2.png");
 }
-.section3-3{
+
+.section3-3 {
     background-image: url("../img/bg3_3.png");
 }
+
 .swiper-container-h .slider_title {
     position: absolute;
     top: 14%;
@@ -113,23 +115,24 @@ img {
 .infodiagram {
     width: 56%;
     height: 43%;
-    margin:0 auto;
+    margin: 0 auto;
     margin-top: 20%;
 }
 
-.section3-2 .infodiagram{
+.section3-2 .infodiagram {
     width: 74%;
     height: 62%;
     margin-top: 16%;
     margin-left: 16%;
 }
-.section3-3 .infodiagram{
+
+.section3-3 .infodiagram {
     width: 90%;
     height: 61%;
     margin-top: 13%;
 }
 
-.swiper-container-vertical>.swiper-pagination-bullets{
+.swiper-container-vertical > .swiper-pagination-bullets {
     position: fixed;
     right: 3%;
 }
@@ -141,11 +144,63 @@ img {
     width: 14px;
     height: 13px;
     margin-bottom: 15px;
-    background-color: rgb(255, 255, 255);;
+    background-color: rgb(255, 255, 255);
+    opacity: 1;
 
 }
 
 .swiper-pagination-bullet-active {
     background: #f78b1f;
+}
+
+.range-slider {
+    position: absolute;
+    bottom: 15%;
+    left: 0%;
+    right: 0;
+    margin: auto;
+    z-index: 1;
+    width: 60%;
+}
+
+.noUi-target {
+    background-color: rgb(67, 80, 99);;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+}
+.noUi-horizontal .noUi-handle {
+    width: 87px;
+    height: 111px;
+    top: -40px;
+    background-image: url(../img/thumb.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+.noUi-handle:after,.noUi-handle:before{
+    content: none;
+}
+.noUi-value {
+    top: 60px;
+    font-size: 23px;
+    font-family: "Gotham";
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+}
+
+.noUi-value:nth-child(1) {
+    left: 0;
+}
+
+.noUi-value:nth-child(2) {
+    left: 50%;
+}
+
+.noUi-value:nth-child(3) {
+    right: 0;
 }
 
