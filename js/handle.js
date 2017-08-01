@@ -9,13 +9,18 @@
         direction: 'vertical',
         longSwipes: false,
         followFinger: false,
+        mousewheelControl:true
 
     });
 
-//onSlideChangeEnd(swiper)
-    swiperV.on('slideChangeStart', function () {
-
+    swiperV.on('reachEnd', function () {
+        var btn = document.querySelector('.btn');
+        btn.style.display='none';
     });
+   swiperV.on('reachBeginning',function () {
+       var btn =document.querySelector('.btn');
+       btn.style.display='block';
+   });
 
     var swiperH = new Swiper('.swiper-container-h', {
         pagination: null,

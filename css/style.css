@@ -28,11 +28,13 @@
 
 html, body {
     height: 100%;
+    min-width: 768px;
 }
 
 body, h2 {
     margin: 0;
     padding: 0;
+
 }
 
 img {
@@ -41,7 +43,7 @@ img {
 }
 
 .swiper-container {
-    width: 100%;
+    max-width: 1366px;
     height: 100%;
 }
 
@@ -55,12 +57,12 @@ img {
 
 .swiper-slide {
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
 }
 
 .section1 {
-    background-image: url("../img/bg1.png");
+    background-image: url("../img/bg1.jpg");
 }
 
 .section1 .slider_title {
@@ -73,9 +75,8 @@ img {
     color: rgb(13, 49, 156);
     line-height: 1.2;
 }
-
 .section2 {
-    background-image: url("../img/bg2.png");
+    background-image: url("../img/bg2.jpg");
     text-align: center;
 }
 
@@ -91,15 +92,20 @@ img {
 }
 
 .section3-1 {
-    background-image: url("../img/bg3_1.png");
+    background-image: url("../img/bg3_1.jpg");
 }
 
 .section3-2 {
-    background-image: url("../img/bg3_2.png");
+    background-image: url("../img/bg3_2.jpg");
 }
 
 .section3-3 {
-    background-image: url("../img/bg3_3.png");
+    background-image: url("../img/bg3_3.jpg");
+}
+.swiper-container-h .swiper-slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .swiper-container-h .slider_title {
@@ -114,26 +120,10 @@ img {
 
 .infodiagram {
     width: 56%;
-    height: 43%;
-    margin: 0 auto;
-    margin-top: 20%;
-}
-
-.section3-2 .infodiagram {
-    width: 74%;
-    height: 62%;
-    margin-top: 16%;
-    margin-left: 16%;
-}
-
-.section3-3 .infodiagram {
-    width: 90%;
-    height: 61%;
-    margin-top: 13%;
 }
 
 .swiper-container-vertical > .swiper-pagination-bullets {
-    position: fixed;
+    position: absolute;
     right: 3%;
 }
 
@@ -170,10 +160,14 @@ img {
     border: none;
 }
 
+.noUi-horizontal {
+    height: 12px;
+}
+
 .noUi-horizontal .noUi-handle {
-    width: 87px;
-    height: 111px;
-    top: -40px;
+    width: 43px;
+    height: 55px;
+    top: -20px;
     background-image: url(../img/thumb.png);
     background-repeat: no-repeat;
     background-size: contain;
@@ -337,7 +331,8 @@ img {
     line-height: 1.2;
     z-index: 10;
 }
-.btn_title:after{
+
+.btn_title:after {
     content: '';
     display: block;
     position: absolute;
@@ -360,13 +355,11 @@ img {
     width: 100%;
     height: 100%;
     position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
     bottom: 17px;
     background-image: url(../img/shine.png);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
+    background-position: center;
 
 }
 
@@ -384,5 +377,45 @@ img {
         opacity: 1;
         background-color: rgba(247, 139, 31, 0);
         border-color: rgba(247, 139, 31, 0);
+    }
+}
+
+@media only screen and (orientation: portrait) {
+    .section3-1 .infodiagram, .section3-2 .infodiagram, .section3-3 .infodiagram {
+        width: 80%;
+    }
+
+    .slider_item-first {
+        top: 33%;
+        left: 58%;
+    }
+
+    .slider_item-second {
+        top: 55%;
+        left: 8%;
+    }
+
+    .slider_item-third {
+        top: 69%;
+        left: 44%;
+    }
+
+    .slider_item-fourth {
+        top: 72%;
+        left: 95%;
+    }
+    .slider_item-fourth span{
+        left: -52px;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (orientation: portrait) {
+    .swiper-container-h .slider_title {
+        top: 20%;
+    }
+
+    .section3-3 .infodiagram {
+        width: 87%;
+
     }
 }
